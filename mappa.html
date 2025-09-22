@@ -43,6 +43,12 @@
       .legend-panel{display:none;position:absolute;top:54px;right:0;z-index:1000}
       .legend-control.open .legend-panel{display:block}
     }
+
+    /* --- Toggle markers --- */
+    .markers-control{
+      background:#fff;padding:6px 10px;border-radius:10px;border:1px solid #ddd;
+      box-shadow:0 4px 18px rgba(0,0,0,.08);font-size:13px;display:flex;align-items:center;gap:8px
+    }
   </style>
 </head>
 <body>
@@ -72,6 +78,49 @@
     }
   }
 
+  // Icona a goccia tipo Google Maps (rosso) come SVG inline in un DivIcon
+function createPinIcon() {
+  const svg = `
+    <svg width="32" height="48" viewBox="0 0 32 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.25"/>
+        </filter>
+      </defs>
+      <!-- Corpo del pin: rosso con bordo bianco -->
+      <path d="M16 46c0 0 12-14.4 12-24C28 10.745 22.627 4 16 4S4 10.745 4 22c0 9.6 12 24 12 24z"
+            fill="#e53935" stroke="#ffffff" stroke-width="2" filter="url(#shadow)"/>
+      <!-- Cerchio interno bianco -->
+      <circle cx="16" cy="20" r="5.5" fill="#ffffff" stroke="#ffffff" stroke-width="0.5"/>
+      <!-- Puntino centrale rosso -->
+      <circle cx="16" cy="20" r="3.5" fill="#e53935"/>
+    </svg>`;
+  return L.divIcon({
+    className: 'news-pin',
+    html: svg,
+    iconSize: [32, 48],
+    iconAnchor: [16, 46],
+    popupAnchor: [0, -40]
+  });
+}
+
+  function formatNewsPopup(item){
+    const safe = (s) => String(s ?? '').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const date = safe(item.date);
+    const title = safe(item.title || item.street || 'Segnalazione');
+    const info = safe(item.info || '');
+    const url = item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer">Apri articolo ↗</a>` : '';
+    const street = item.street ? `<div style="color:#555">${safe(item.street)}</div>` : '';
+    return `
+      <div style="min-width:220px">
+        <div style="font-weight:700;margin-bottom:4px">${title}</div>
+        ${street}
+        <div style="font-size:12px;color:#666;margin:6px 0">${date}</div>
+        <div style="margin:6px 0">${info}</div>
+        <div style="margin-top:8px">${url}</div>
+      </div>`;
+  }
+
   async function init() {
     const id = qs('id');
     if (!id) { document.getElementById('title').textContent = 'Mappa (id mancante)'; return; }
@@ -90,6 +139,27 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+    // Controllo simple per mostra/nascondi marker
+    const MarkersToggle = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function(){
+        const c = L.DomUtil.create('div', 'markers-control');
+        const lbl = L.DomUtil.create('label', '', c);
+        const chk = L.DomUtil.create('input', '', lbl);
+        chk.type = 'checkbox'; chk.checked = true; chk.style.marginRight = '6px';
+        lbl.appendChild(document.createTextNode('Mostra marker notizie'));
+        L.DomEvent.disableClickPropagation(c);
+        L.DomEvent.on(chk, 'change', () => {
+          if (window.__newsLayer) {
+            if (chk.checked) { map.addLayer(window.__newsLayer); }
+            else { map.removeLayer(window.__newsLayer); }
+          }
+        });
+        return c;
+      }
+    });
+    map.addControl(new MarkersToggle());
 
     // Dati
     const [geojson, rows] = await Promise.all([
@@ -160,8 +230,33 @@
         return container;
       }
     });
-
     map.addControl(new LegendControl());
+
+    // --- Marker notizie da JSON esterno (se definito nel manifest) ---
+    if (cfg.markers_url) {
+      try {
+        const news = await (await fetch(cfg.markers_url + '?v=' + ts)).json();
+
+        const icon = createPinIcon();
+        const points = (news || []).filter(p => Number.isFinite(+p.lat) && Number.isFinite(+p.lng));
+
+        window.__newsLayer = L.layerGroup(
+          points.map(p => {
+            const m = L.marker([+p.lat, +p.lng], { icon, zIndexOffset: 1000 });
+            m.bindPopup(formatNewsPopup(p), { maxWidth: 320, closeButton: true });
+            return m;
+          })
+        ).addTo(map);
+
+        // (opzionale) adatta lo zoom per includere anche i marker, se ci sono
+        // if (points.length) {
+        //   const bounds = L.latLngBounds(points.map(p => [p.lat, p.lng]));
+        //   map.fitBounds(bounds.pad(0.08));
+        // }
+      } catch(e) {
+        console.warn('Impossibile caricare markers:', e);
+      }
+    }
   }
 
   init();

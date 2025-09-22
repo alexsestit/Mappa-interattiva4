@@ -1,0 +1,164 @@
+[
+  {
+    "id": "burg-0001",
+    "title": "Villa di Fiorello svaligiata",
+    "date": "2025-08-08",
+    "info": "Collane, pietre preziose, monili e orologi rubati dall’abitazione del comico in via della Cammilluccia, Roma. Valore stimato ~300.000€.",
+    "url": "https://tg24.sky.it/cronaca/2025/08/08/furto-fiorello-via-cammilluccia-roma",
+    "street": "Via della Cammilluccia, Roma (Quartiere Villa Clara)",
+    "lat": 41.9448,
+    "lng": 12.4535
+  },
+  {
+    "id": "burg-0002",
+    "title": "Furto da 40.000€ in appartamento sulla Cassia",
+    "date": "2025-09-20",
+    "info": "Tre arresti dopo furto in appartamento sulla Cassia; bottino e arnesi da scasso recuperati.",
+    "url": "https://www.lacapitale.it/articolo/roma-furto-cassia-40mila-euro-tre-arresti",
+    "street": "Cassia, Roma",
+    "lat": 41.9550,
+    "lng": 12.4768
+  },
+  {
+    "id": "burg-0003",
+    "title": "Allarme da app: ladri scoperti mentre rubano",
+    "date": "2025-08-13",
+    "info": "Mentre era in vacanza, la proprietaria a Roma vede l’allarme su app, scopre che tre uomini stanno rubando in casa, chiama i carabinieri, gli arresti effettuati.",
+    "url": "https://www.tgcom24.mediaset.it/cronaca/roma-vacanza-vede-ladri-casa-app-arrestati_102165630-202502k.shtml",
+    "street": "Roma (indirizzo non specificato)",
+    "lat": 41.9028,
+    "lng": 12.4964
+  },
+  {
+    "id": "burg-0004",
+    "title": "12 furti in abitazione: banda sgominata",
+    "date": "2025-09-22",
+    "info": "Furti in abitazione a Milano e hinterland: banda di tre specialisti arrestata, operavano via auto diverse e chiavi alterate.",
+    "url": "https://www.ilgiorno.it/milano/cronaca/furti-abitazione-qvq59aj9",
+    "street": "Milano / Garbagnate Milanese / Saronno",
+    "lat": 45.5689,
+    "lng": 9.1015
+  },
+  {
+    "id": "burg-001",
+    "title": "Sgominate bande topi d’appartamento",
+    "date": "2025-08-06",
+    "info": "Quattro cittadini georgiani arrestati per furti in abitazione nella periferia di Bologna, quartieri Bolognina e San Lazzaro. Usavano B&B come base logistica. Fonte: ANSA / RaiNews.",
+    "url": "https://www.rainews.it/tgr/emiliaromagna/articoli/2025/08/sgominata-banda-di-topi-dappartamento-b0029be9-c25b-458a-addb-7a790116113c.html",
+    "street": "Quartieri Bolognina / San Lazzaro, Bologna",
+    "lat": 44.5210,
+    "lng": 11.3480
+  },
+  {
+    "id": "burg-002",
+    "title": "Colpi in appartamento, 8 arresti (Murri / Via Fossolo)",
+    "date": "2025-08-06",
+    "info": "Arrestati 8 dopo indagini, refurtiva recuperata; base logistica in Murri, tentativo d’ingresso da condominio in via Fossolo. Fonte: Teleromagna.",
+    "url": "https://teleromagna.it/it/cronaca/2025/8/6/bologna-colpi-in-appartamento-8-arresti-e-refurtiva-recuperata-video",
+    "street": "Murri / Via Fossolo, Bologna",
+    "lat": 44.5060,
+    "lng": 11.3700
+  },
+  {
+    "id": "burg-003",
+    "title": "Tecniche della colla, scritte, case nel mirino",
+    "date": "2025-08-19",
+    "info": "Case svaligiate a via Bentivoglio, via Grieco, Barca, zona Fossolo; ladri usano segnali piccoli per capire se casa è vuota, tecniche di ingresso. Fonte: Il Resto del Carlino.",
+    "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/scritte-colla-tecniche-ladri-oectnwtq",
+    "street": "Via Bentivoglio / Via Grieco / Barca / Fossolo, Bologna",
+    "lat": 44.5215,
+    "lng": 11.3400
+  },
+  {
+    "id": "burg-004",
+    "title": "Banda dei furti in casa arrestata a Milano",
+    "date": "2025-09-??",
+    "info": "Bloccata la banda che ha commesso numerosi furti in abitazione. Fonte: Polizia di Stato Milano.",
+    "url": "https://www.poliziadistato.it/articolo/153068d16e6655d04050864279",
+    "street": "Milano (zona non specificata)",
+    "lat": 45.4642,
+    "lng": 9.1900
+  },
+  {
+    "id": "burg-to-0001",
+    "title": "Furto in casa con falsi distintivi (Borgo Vittoria)",
+    "date": "2025-05-01",
+    "info": "Ladro finge perquisizione con giubbotti e distintivi: derubato un appartamento nel quartiere Borgo Vittoria, Torino. Arrestati dalla Squadra mobile. Fonte: Corriere Torino.",
+    "url": "https://torino.corriere.it/notizie/cronaca/25_maggio_01/furto-in-casa-ladri-con-giubbotti-e-distintivi-dei-carabinieri-fingono-una-perquisizione-arrestati-dalla-polizia-f05a2483-f159-49c8-adfa-47541a2eexlk.shtml",
+    "street": "Borgo Vittoria, Torino",
+    "lat": 45.0730,
+    "lng": 7.7120
+  },
+  {
+    "id": "burg-na-0002",
+    "title": "Furto in appartamento al Vomero",
+    "date": "2025-08-06",
+    "info": "Furto in appartamento nel cuore del Vomero, via Aniello Falcone; arrestato un uomo di 35 anni, già noto. Fonte: NanoTV / Cronachedi.",
+    "url": "https://www.nanotv.it/2025/08/06/napoli-furto-in-appartamento-al-vomero-35enne-arrestato-caccia-al-complice/",
+    "street": "Via Aniello Falcone, Vomero, Napoli",
+    "lat": 40.8515,
+    "lng": 14.2560
+  },
+  {
+    "id": "burg-na-0003",
+    "title": "Tentato furto, due arresti in via Sant’Arcangelo a Baiano",
+    "date": "2025-08-27",
+    "info": "Due uomini sorpresi con arnesi da scasso mentre tentavano di entrare in un edificio in via Sant’Arcangelo a Baiano, Napoli. Fonte: Virgilio Notizie.",
+    "url": "https://www.virgilio.it/notizie/napoli-sorpresi-con-tronchese-e-arnesi-da-scasso-arrestati-due-uomini-mentre-tentano-un-furto-in-casa-1698997",
+    "street": "Via Sant’Arcangelo a Baiano, Napoli",
+    "lat": 40.8450,
+    "lng": 14.2610
+  },
+  {
+    "id": "burg-na-0004",
+    "title": "Furto nell’appartamento di Rione Alto",
+    "date": "2025-08-01",
+    "info": "Attrezzi da lavoro rubati nell’abitazione di uno degli operai morti al Rione Alto, quartiere Sanità, Napoli. Fonte: Il Mattino / RaiNews.",
+    "url": "https://www.rainews.it/tgr/campania/articoli/2025/08/furto-in-casa-di-uno-degli-operai-morti-al-rione-alto-rubati-attrezzi-da-lavoro-vincenzo-del-grosso-ciro-pierro-luigi-romano-via-san-giacomo-capri-incidente-sul-lavoro-f134b949-91da-47e0-b9cb-7e6e73306cc6.html",
+    "street": "Sanità / Rione Alto, Napoli",
+    "lat": 40.8540,
+    "lng": 14.2660
+  },
+  {
+    "id": "burg-fi-0005",
+    "title": "Furto al Galluzzo: complice travestito da disinfestatore",
+    "date": "2025-06-30",
+    "info": "Furto in abitazione a Galluzzo, Firenze. Un complice in giardino vestito da disinfestatore mentre un altro svaligia la casa; rubati gioielli e orologi. Fonte: Da I Colli Fiorentini.",
+    "url": "https://daicollifiorentini.it/galluzzo-furto-in-abitazione-il-complice-in-giardino-travestito-da-disinfestatore-mentre/",
+    "street": "Via Borsi, Galluzzo, Firenze",
+    "lat": 43.7575,
+    "lng": 11.2240
+  },
+  {
+    "id": "burg-fi-0006",
+    "title": "Ladri in casa di Nardella: il cane li mette in fuga",
+    "date": "2025-06-19",
+    "info": "I ladri avrebbero manomesso la rete del giardino e forzato la porta del piano terra nella casa dell’ex sindaco a Firenze Sud. Bottino modesto. Fonte: Corriere Fiorentino / La Nazione.",
+    "url": "https://corrierefiorentino.corriere.it/notizie/cronaca/25_giugno_19/firenze-ladri-in-casa-di-dario-nardella-li-mette-in-fuga-il-cane-882d1308-03da-4d1f-9e5a-eb92f7114xlk.shtml",
+    "street": "Zona Oltrarno / Firenze Sud, Firenze",
+    "lat": 43.7678,
+    "lng": 11.2450
+  },
+  {
+    "id": "burg-to-0005",
+    "title": "Furto con distintivi dei carabinieri, Borgo Vittoria",
+    "date": "2025-05-01",
+    "info": "Due ladri fingono perquisizione con giubbotti e distintivi, entrano in un appartamento in Borgo Vittoria, Torino. Arrestati. Fonte: Corriere Torino.",
+    "url": "https://torino.corriere.it/notizie/cronaca/25_maggio_01/furto-in-casa-ladri-con-giubbotti-e-distintivi-dei-carabinieri-fingono-una-perquisizione-arrestati-dalla-polizia-f05a2483-f159-49c8-adfa-47541a2eexlk.shtml",
+    "street": "Borgo Vittoria, Torino",
+    "lat": 45.0730,
+    "lng": 7.7120
+  },
+  {
+    "id": "burg-to-0006",
+    "title": "Banda furti in casa smantellata sulle Colline di Torino",
+    "date": "2025-06-14",
+    "info": "Smantellata banda di 8 indagati per 68 furti in abitazione sulle colline torinesi. Fonte: Il Giornale Popolare.",
+    "url": "https://ilgiornalepopolare.it/colline-di-torino-sgominata-banda-dei-furti-in-casa-8-indagati/",
+    "street": "Colline di Torino",
+    "lat": 45.0600,
+    "lng": 7.7300
+  }
+]
+
+

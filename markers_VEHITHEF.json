@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rm-0001",
+    "title": "Furto su auto in sosta",
+    "date": "2025-05-12",
+    "info": "Colpo notturno in via Nazionale; finestrino rotto, rubata borsa.",
+    "url": "https://esempio.test/articolo-123",
+    "street": "Via Nazionale, Roma",
+    "lat": 41.90285,
+    "lng": 12.49643
+  },
+  {
+    "id": "mi-0002",
+    "title": "Tentato furto",
+    "date": "2025-03-28",
+    "info": "Residenti segnalano movimenti sospetti; pattuglia in zona.",
+    "url": "https://esempio.test/articolo-456",
+    "street": "Via Torino, Milano",
+    "lat": 45.46362,
+    "lng": 9.18812
+  }
+]

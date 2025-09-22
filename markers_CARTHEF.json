@@ -1,0 +1,32 @@
+[
+  {
+    "id": "veh-0001",
+    "title": "Auto rubata, inseguimento e incidente mortale",
+    "date": "2025-09-12",
+    "info": "Un’auto rubata guidata da un 19enne è stata intercettata da una volante; durante l’inseguimento l’auto si è schiantata contro un palo in via Murri, all’altezza dell’incrocio con via dei Lamponi. È morto il passeggero 18enne. Fonte: RaiNews / ANSA etc.",
+    "url": "https://www.rainews.it/articoli/2025/09/lo-schianto-micidiale-durante-linseguimento-con-la-polizia-morto-un-ragazzo-di-18-anni-lincidente-abologna-4baa4db3-be3d-4139-9dc3-4fe9cfd7ac40.html",
+    "street": "Via Murri, incrocio con Via dei Lamponi, Bologna",
+    "lat": 44.48056,
+    "lng": 11.36324
+  },
+  {
+    "id": "veh-0002",
+    "title": "Arresto per furto in auto con decine di chiavi sequestrate",
+    "date": "2025-08-30",
+    "info": "Un 34enne modenese è stato arrestato a Bologna mentre stava rovistando in un’auto parcheggiata in via Leopoldo Fregoli, quartiere San Donato-San Vitale. Monete rubate e astuccio con chiavi.",
+    "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/arresto-furto-auto-chiavi-sequestrate-via-fregoli-XXXX",  
+    "street": "Via Leopoldo Fregoli, Bologna",
+    "lat": 44.672064,
+    "lng": 11.481005
+  },
+  {
+    "id": "veh-0003",
+    "title": "Auto rubata ritrovata nel canale Navile a Malalbergo",
+    "date": "2025-04-XX",
+    "info": "Un’auto rubata è stata ritrovata nel canale Navile, all’incrocio tra via Nazionale e via La Cascina, zona Malalbergo. Nessuna persona a bordo al momento del recupero.",
+    "url": "https://www.bolognacronaca.it/articolo/auto-nel-canale-navile-malalbergo",  
+    "street": "Via Nazionale / Via La Cascina, Malalbergo (BO)",
+    "lat": 44.7140,
+    "lng": 11.5215
+  }
+]
