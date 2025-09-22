@@ -1,0 +1,164 @@
+/* === Layout generale === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Titoli */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #222;
+}
+
+/* === Container principale === */
+.container {
+  width: min(1100px, 92%);
+  margin: 24px auto 40px;
+}
+
+/* === Sezione intro (home) === */
+.hero {
+  text-align: center;
+}
+.hero h1 {
+  margin: 16px 0 8px;
+}
+.hero p {
+  color: #555;
+  margin: 0 0 20px;
+}
+
+/* === Cards in colonna (index) === */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+.card h2 {
+  margin: 4px 0 8px;
+}
+.card p {
+  color: #555;
+}
+
+/* === Bottoni neri === */
+/* === Bottoni neri statici === */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #fff;        /* sfondo bianco */
+  color: #000;             /* testo nero */
+  border: 1px solid #000;  /* bordo nero */
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Nessun cambiamento su hover */
+.button:hover,
+.button:active,
+.button:focus {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+
+/* === Mappa === */
+#mapid {
+  height: 90vh;
+  width: 100%;
+  border: none;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* === Legenda Leaflet === */
+.info.legend {
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.4em;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+}
+.info.legend h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+}
+.info.legend i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: -3px;
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+/* Stile bottone nero anche per il link Home */
+.topbar .tabs a,
+nav.tabs a {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Nessun cambiamento al passaggio del mouse */
+.topbar .tabs a:hover,
+nav.tabs a:hover,
+.topbar .tabs a:focus,
+nav.tabs a:focus {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Nessuna variazione su hover/visited/active/focus */
+.topbar .tabs a:hover,
+.topbar .tabs a:visited,
+.topbar .tabs a:active,
+.topbar .tabs a:focus,
+header nav.tabs a:hover,
+header nav.tabs a:visited,
+header nav.tabs a:active,
+header nav.tabs a:focus,
+nav.tabs a:hover,
+nav.tabs a:visited,
+nav.tabs a:active,
+nav.tabs a:focus {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

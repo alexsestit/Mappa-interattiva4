@@ -1,0 +1,638 @@
+[
+    {
+        "REF_AREA": "IT108",
+        "Territorio_x": "Monza e della Brianza",
+        "NUTS_ID": "ITC4D",
+        "RATE_TIME": "0,929"
+    },
+    {
+        "REF_AREA": "IT109",
+        "Territorio_x": "Fermo",
+        "NUTS_ID": "ITI35",
+        "RATE_TIME": "0,432"
+    },
+    {
+        "REF_AREA": "IT110",
+        "Territorio_x": "Barletta-Andria-Trani",
+        "NUTS_ID": "ITF48",
+        "RATE_TIME": "9,034"
+    },
+    {
+        "REF_AREA": "ITC11",
+        "Territorio_x": "Torino",
+        "NUTS_ID": "ITC11",
+        "RATE_TIME": "1,466"
+    },
+    {
+        "REF_AREA": "ITC12",
+        "Territorio_x": "Vercelli",
+        "NUTS_ID": "ITC12",
+        "RATE_TIME": "0,254"
+    },
+    {
+        "REF_AREA": "ITC13",
+        "Territorio_x": "Biella",
+        "NUTS_ID": "ITC13",
+        "RATE_TIME": "0,224"
+    },
+    {
+        "REF_AREA": "ITC14",
+        "Territorio_x": "Verbano-Cusio-Ossola",
+        "NUTS_ID": "ITC14",
+        "RATE_TIME": "0,156"
+    },
+    {
+        "REF_AREA": "ITC15",
+        "Territorio_x": "Novara",
+        "NUTS_ID": "ITC15",
+        "RATE_TIME": "0,305"
+    },
+    {
+        "REF_AREA": "ITC16",
+        "Territorio_x": "Cuneo",
+        "NUTS_ID": "ITC16",
+        "RATE_TIME": "0,236"
+    },
+    {
+        "REF_AREA": "ITC17",
+        "Territorio_x": "Asti",
+        "NUTS_ID": "ITC17",
+        "RATE_TIME": "0,483"
+    },
+    {
+        "REF_AREA": "ITC18",
+        "Territorio_x": "Alessandria",
+        "NUTS_ID": "ITC18",
+        "RATE_TIME": "0,438"
+    },
+    {
+        "REF_AREA": "ITC20",
+        "Territorio_x": "'Valle d\"'Aosta / Vallée d\"'Aoste'",
+        "NUTS_ID": "ITC20",
+        "RATE_TIME": "0,215"
+    },
+    {
+        "REF_AREA": "ITC31",
+        "Territorio_x": "Imperia",
+        "NUTS_ID": "ITC31",
+        "RATE_TIME": "0,42"
+    },
+    {
+        "REF_AREA": "ITC32",
+        "Territorio_x": "Savona",
+        "NUTS_ID": "ITC32",
+        "RATE_TIME": "0,332"
+    },
+    {
+        "REF_AREA": "ITC33",
+        "Territorio_x": "Genova",
+        "NUTS_ID": "ITC33",
+        "RATE_TIME": "0,299"
+    },
+    {
+        "REF_AREA": "ITC34",
+        "Territorio_x": "La Spezia",
+        "NUTS_ID": "ITC34",
+        "RATE_TIME": "0,226"
+    },
+    {
+        "REF_AREA": "ITC41",
+        "Territorio_x": "Varese",
+        "NUTS_ID": "ITC41",
+        "RATE_TIME": "0,45"
+    },
+    {
+        "REF_AREA": "ITC42",
+        "Territorio_x": "Como",
+        "NUTS_ID": "ITC42",
+        "RATE_TIME": "0,369"
+    },
+    {
+        "REF_AREA": "ITC43",
+        "Territorio_x": "Lecco",
+        "NUTS_ID": "ITC43",
+        "RATE_TIME": "0,402"
+    },
+    {
+        "REF_AREA": "ITC44",
+        "Territorio_x": "Sondrio",
+        "NUTS_ID": "ITC44",
+        "RATE_TIME": "0,083"
+    },
+    {
+        "REF_AREA": "ITC45",
+        "Territorio_x": "Milano",
+        "NUTS_ID": "ITC4C",
+        "RATE_TIME": "1,956"
+    },
+    {
+        "REF_AREA": "ITC46",
+        "Territorio_x": "Bergamo",
+        "NUTS_ID": "ITC46",
+        "RATE_TIME": "0,432"
+    },
+    {
+        "REF_AREA": "ITC47",
+        "Territorio_x": "Brescia",
+        "NUTS_ID": "ITC47",
+        "RATE_TIME": "0,494"
+    },
+    {
+        "REF_AREA": "ITC48",
+        "Territorio_x": "Pavia",
+        "NUTS_ID": "ITC48",
+        "RATE_TIME": "0,855"
+    },
+    {
+        "REF_AREA": "ITC49",
+        "Territorio_x": "Lodi",
+        "NUTS_ID": "ITC49",
+        "RATE_TIME": "0,408"
+    },
+    {
+        "REF_AREA": "ITC4A",
+        "Territorio_x": "Cremona",
+        "NUTS_ID": "ITC4A",
+        "RATE_TIME": "0,327"
+    },
+    {
+        "REF_AREA": "ITC4B",
+        "Territorio_x": "Mantova",
+        "NUTS_ID": "ITC4B",
+        "RATE_TIME": "0,227"
+    },
+    {
+        "REF_AREA": "ITD10",
+        "Territorio_x": "Bolzano / Bozen",
+        "NUTS_ID": "ITH10",
+        "RATE_TIME": "0,131"
+    },
+    {
+        "REF_AREA": "ITD20",
+        "Territorio_x": "Trento",
+        "NUTS_ID": "ITH20",
+        "RATE_TIME": "0,129"
+    },
+    {
+        "REF_AREA": "ITD31",
+        "Territorio_x": "Verona",
+        "NUTS_ID": "ITH31",
+        "RATE_TIME": "0,421"
+    },
+    {
+        "REF_AREA": "ITD32",
+        "Territorio_x": "Vicenza",
+        "NUTS_ID": "ITH32",
+        "RATE_TIME": "0,253"
+    },
+    {
+        "REF_AREA": "ITD33",
+        "Territorio_x": "Belluno",
+        "NUTS_ID": "ITH33",
+        "RATE_TIME": "0,076"
+    },
+    {
+        "REF_AREA": "ITD34",
+        "Territorio_x": "Treviso",
+        "NUTS_ID": "ITH34",
+        "RATE_TIME": "0,176"
+    },
+    {
+        "REF_AREA": "ITD35",
+        "Territorio_x": "Venezia",
+        "NUTS_ID": "ITH35",
+        "RATE_TIME": "0,227"
+    },
+    {
+        "REF_AREA": "ITD36",
+        "Territorio_x": "Padova",
+        "NUTS_ID": "ITH36",
+        "RATE_TIME": "0,263"
+    },
+    {
+        "REF_AREA": "ITD37",
+        "Territorio_x": "Rovigo",
+        "NUTS_ID": "ITH37",
+        "RATE_TIME": "0,195"
+    },
+    {
+        "REF_AREA": "ITD41",
+        "Territorio_x": "Pordenone",
+        "NUTS_ID": "ITH41",
+        "RATE_TIME": "0,099"
+    },
+    {
+        "REF_AREA": "ITD42",
+        "Territorio_x": "Udine",
+        "NUTS_ID": "ITH42",
+        "RATE_TIME": "0,166"
+    },
+    {
+        "REF_AREA": "ITD43",
+        "Territorio_x": "Gorizia",
+        "NUTS_ID": "ITH43",
+        "RATE_TIME": "0,197"
+    },
+    {
+        "REF_AREA": "ITD44",
+        "Territorio_x": "Trieste",
+        "NUTS_ID": "ITH44",
+        "RATE_TIME": "0,518"
+    },
+    {
+        "REF_AREA": "ITD51",
+        "Territorio_x": "Piacenza",
+        "NUTS_ID": "ITH51",
+        "RATE_TIME": "0,412"
+    },
+    {
+        "REF_AREA": "ITD52",
+        "Territorio_x": "Parma",
+        "NUTS_ID": "ITH52",
+        "RATE_TIME": "0,478"
+    },
+    {
+        "REF_AREA": "ITD53",
+        "Territorio_x": "'Reggio nell\"'Emilia'",
+        "NUTS_ID": "ITH53",
+        "RATE_TIME": "0,358"
+    },
+    {
+        "REF_AREA": "ITD54",
+        "Territorio_x": "Modena",
+        "NUTS_ID": "ITH54",
+        "RATE_TIME": "0,432"
+    },
+    {
+        "REF_AREA": "ITD55",
+        "Territorio_x": "Bologna",
+        "NUTS_ID": "ITH55",
+        "RATE_TIME": "0,596"
+    },
+    {
+        "REF_AREA": "ITD56",
+        "Territorio_x": "Ferrara",
+        "NUTS_ID": "ITH56",
+        "RATE_TIME": "0,285"
+    },
+    {
+        "REF_AREA": "ITD57",
+        "Territorio_x": "Ravenna",
+        "NUTS_ID": "ITH57",
+        "RATE_TIME": "0,327"
+    },
+    {
+        "REF_AREA": "ITD58",
+        "Territorio_x": "Forlì-Cesena",
+        "NUTS_ID": "ITH58",
+        "RATE_TIME": "0,255"
+    },
+    {
+        "REF_AREA": "ITD59",
+        "Territorio_x": "Rimini",
+        "NUTS_ID": "ITH59",
+        "RATE_TIME": "0,495"
+    },
+    {
+        "REF_AREA": "ITE11",
+        "Territorio_x": "Massa-Carrara",
+        "NUTS_ID": "ITI11",
+        "RATE_TIME": "0,278"
+    },
+    {
+        "REF_AREA": "ITE12",
+        "Territorio_x": "Lucca",
+        "NUTS_ID": "ITI12",
+        "RATE_TIME": "0,31"
+    },
+    {
+        "REF_AREA": "ITE13",
+        "Territorio_x": "Pistoia",
+        "NUTS_ID": "ITI13",
+        "RATE_TIME": "0,299"
+    },
+    {
+        "REF_AREA": "ITE14",
+        "Territorio_x": "Firenze",
+        "NUTS_ID": "ITI14",
+        "RATE_TIME": "0,578"
+    },
+    {
+        "REF_AREA": "ITE15",
+        "Territorio_x": "Prato",
+        "NUTS_ID": "ITI15",
+        "RATE_TIME": "0,698"
+    },
+    {
+        "REF_AREA": "ITE16",
+        "Territorio_x": "Livorno",
+        "NUTS_ID": "ITI16",
+        "RATE_TIME": "0,458"
+    },
+    {
+        "REF_AREA": "ITE17",
+        "Territorio_x": "Pisa",
+        "NUTS_ID": "ITI17",
+        "RATE_TIME": "0,408"
+    },
+    {
+        "REF_AREA": "ITE18",
+        "Territorio_x": "Arezzo",
+        "NUTS_ID": "ITI18",
+        "RATE_TIME": "0,207"
+    },
+    {
+        "REF_AREA": "ITE19",
+        "Territorio_x": "Siena",
+        "NUTS_ID": "ITI19",
+        "RATE_TIME": "0,227"
+    },
+    {
+        "REF_AREA": "ITE1A",
+        "Territorio_x": "Grosseto",
+        "NUTS_ID": "ITI1A",
+        "RATE_TIME": "0,256"
+    },
+    {
+        "REF_AREA": "ITE21",
+        "Territorio_x": "Perugia",
+        "NUTS_ID": "ITI21",
+        "RATE_TIME": "0,316"
+    },
+    {
+        "REF_AREA": "ITE22",
+        "Territorio_x": "Terni",
+        "NUTS_ID": "ITI22",
+        "RATE_TIME": "0,26"
+    },
+    {
+        "REF_AREA": "ITE31",
+        "Territorio_x": "Pesaro e Urbino",
+        "NUTS_ID": "ITI31",
+        "RATE_TIME": "0,241"
+    },
+    {
+        "REF_AREA": "ITE32",
+        "Territorio_x": "Ancona",
+        "NUTS_ID": "ITI32",
+        "RATE_TIME": "0,25"
+    },
+    {
+        "REF_AREA": "ITE33",
+        "Territorio_x": "Macerata",
+        "NUTS_ID": "ITI33",
+        "RATE_TIME": "0,244"
+    },
+    {
+        "REF_AREA": "ITE34",
+        "Territorio_x": "Ascoli Piceno",
+        "NUTS_ID": "ITI34",
+        "RATE_TIME": "0,431"
+    },
+    {
+        "REF_AREA": "ITE41",
+        "Territorio_x": "Viterbo",
+        "NUTS_ID": "ITI41",
+        "RATE_TIME": "0,335"
+    },
+    {
+        "REF_AREA": "ITE42",
+        "Territorio_x": "Rieti",
+        "NUTS_ID": "ITI42",
+        "RATE_TIME": "0,31"
+    },
+    {
+        "REF_AREA": "ITE43",
+        "Territorio_x": "Roma",
+        "NUTS_ID": "ITI43",
+        "RATE_TIME": "3,553"
+    },
+    {
+        "REF_AREA": "ITE44",
+        "Territorio_x": "Latina",
+        "NUTS_ID": "ITI44",
+        "RATE_TIME": "1,216"
+    },
+    {
+        "REF_AREA": "ITE45",
+        "Territorio_x": "Frosinone",
+        "NUTS_ID": "ITI45",
+        "RATE_TIME": "0,552"
+    },
+    {
+        "REF_AREA": "ITF11",
+        "Territorio_x": "'L\"'Aquila'",
+        "NUTS_ID": "ITF11",
+        "RATE_TIME": "0,322"
+    },
+    {
+        "REF_AREA": "ITF12",
+        "Territorio_x": "Teramo",
+        "NUTS_ID": "ITF12",
+        "RATE_TIME": "0,589"
+    },
+    {
+        "REF_AREA": "ITF13",
+        "Territorio_x": "Pescara",
+        "NUTS_ID": "ITF13",
+        "RATE_TIME": "1,225"
+    },
+    {
+        "REF_AREA": "ITF14",
+        "Territorio_x": "Chieti",
+        "NUTS_ID": "ITF14",
+        "RATE_TIME": "1,027"
+    },
+    {
+        "REF_AREA": "ITF21",
+        "Territorio_x": "Isernia",
+        "NUTS_ID": "ITF21",
+        "RATE_TIME": "0,401"
+    },
+    {
+        "REF_AREA": "ITF22",
+        "Territorio_x": "Campobasso",
+        "NUTS_ID": "ITF22",
+        "RATE_TIME": "2,501"
+    },
+    {
+        "REF_AREA": "ITF31",
+        "Territorio_x": "Caserta",
+        "NUTS_ID": "ITF31",
+        "RATE_TIME": "3,837"
+    },
+    {
+        "REF_AREA": "ITF32",
+        "Territorio_x": "Benevento",
+        "NUTS_ID": "ITF32",
+        "RATE_TIME": "0,613"
+    },
+    {
+        "REF_AREA": "ITF33",
+        "Territorio_x": "Napoli",
+        "NUTS_ID": "ITF33",
+        "RATE_TIME": "6,313"
+    },
+    {
+        "REF_AREA": "ITF34",
+        "Territorio_x": "Avellino",
+        "NUTS_ID": "ITF34",
+        "RATE_TIME": "0,885"
+    },
+    {
+        "REF_AREA": "ITF35",
+        "Territorio_x": "Salerno",
+        "NUTS_ID": "ITF35",
+        "RATE_TIME": "2,896"
+    },
+    {
+        "REF_AREA": "ITF41",
+        "Territorio_x": "Foggia",
+        "NUTS_ID": "ITF46",
+        "RATE_TIME": "6,296"
+    },
+    {
+        "REF_AREA": "ITF42",
+        "Territorio_x": "Bari",
+        "NUTS_ID": "ITF47",
+        "RATE_TIME": "4,865"
+    },
+    {
+        "REF_AREA": "ITF43",
+        "Territorio_x": "Taranto",
+        "NUTS_ID": "ITF43",
+        "RATE_TIME": "1,462"
+    },
+    {
+        "REF_AREA": "ITF44",
+        "Territorio_x": "Brindisi",
+        "NUTS_ID": "ITF44",
+        "RATE_TIME": "2,67"
+    },
+    {
+        "REF_AREA": "ITF45",
+        "Territorio_x": "Lecce",
+        "NUTS_ID": "ITF45",
+        "RATE_TIME": "1,098"
+    },
+    {
+        "REF_AREA": "ITF51",
+        "Territorio_x": "Potenza",
+        "NUTS_ID": "ITF51",
+        "RATE_TIME": "0,341"
+    },
+    {
+        "REF_AREA": "ITF52",
+        "Territorio_x": "Matera",
+        "NUTS_ID": "ITF52",
+        "RATE_TIME": "0,637"
+    },
+    {
+        "REF_AREA": "ITF61",
+        "Territorio_x": "Cosenza",
+        "NUTS_ID": "ITF61",
+        "RATE_TIME": "1,093"
+    },
+    {
+        "REF_AREA": "ITF62",
+        "Territorio_x": "Crotone",
+        "NUTS_ID": "ITF62",
+        "RATE_TIME": "0,565"
+    },
+    {
+        "REF_AREA": "ITF63",
+        "Territorio_x": "Catanzaro",
+        "NUTS_ID": "ITF63",
+        "RATE_TIME": "1,295"
+    },
+    {
+        "REF_AREA": "ITF64",
+        "Territorio_x": "Vibo Valentia",
+        "NUTS_ID": "ITF64",
+        "RATE_TIME": "0,746"
+    },
+    {
+        "REF_AREA": "ITF65",
+        "Territorio_x": "Reggio di Calabria",
+        "NUTS_ID": "ITF65",
+        "RATE_TIME": "1,5"
+    },
+    {
+        "REF_AREA": "ITG11",
+        "Territorio_x": "Trapani",
+        "NUTS_ID": "ITG11",
+        "RATE_TIME": "0,51"
+    },
+    {
+        "REF_AREA": "ITG12",
+        "Territorio_x": "Palermo",
+        "NUTS_ID": "ITG12",
+        "RATE_TIME": "4,606"
+    },
+    {
+        "REF_AREA": "ITG13",
+        "Territorio_x": "Messina",
+        "NUTS_ID": "ITG13",
+        "RATE_TIME": "0,887"
+    },
+    {
+        "REF_AREA": "ITG14",
+        "Territorio_x": "Agrigento",
+        "NUTS_ID": "ITG14",
+        "RATE_TIME": "0,613"
+    },
+    {
+        "REF_AREA": "ITG15",
+        "Territorio_x": "Caltanissetta",
+        "NUTS_ID": "ITG15",
+        "RATE_TIME": "0,82"
+    },
+    {
+        "REF_AREA": "ITG16",
+        "Territorio_x": "Enna",
+        "NUTS_ID": "ITG16",
+        "RATE_TIME": "0,526"
+    },
+    {
+        "REF_AREA": "ITG17",
+        "Territorio_x": "Catania",
+        "NUTS_ID": "ITG17",
+        "RATE_TIME": "4,916"
+    },
+    {
+        "REF_AREA": "ITG18",
+        "Territorio_x": "Ragusa",
+        "NUTS_ID": "ITG18",
+        "RATE_TIME": "0,772"
+    },
+    {
+        "REF_AREA": "ITG19",
+        "Territorio_x": "Siracusa",
+        "NUTS_ID": "ITG19",
+        "RATE_TIME": "1,654"
+    },
+    {
+        "REF_AREA": "ITG25",
+        "Territorio_x": "Sassari",
+        "NUTS_ID": "ITG25",
+        "RATE_TIME": "0,349"
+    },
+    {
+        "REF_AREA": "ITG26",
+        "Territorio_x": "Nuoro",
+        "NUTS_ID": "ITG26",
+        "RATE_TIME": "0,293"
+    },
+    {
+        "REF_AREA": "ITG27",
+        "Territorio_x": "Cagliari",
+        "NUTS_ID": "ITG27",
+        "RATE_TIME": "1,188"
+    },
+    {
+        "REF_AREA": "ITG28",
+        "Territorio_x": "Oristano",
+        "NUTS_ID": "ITG28",
+        "RATE_TIME": "0,126"
+    }
+]

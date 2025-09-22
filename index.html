@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crimini - Mappe Interattive</title>
+
+  <!-- tuo CSS (puoi lasciarlo) -->
+  <link rel="stylesheet" href="style.css?v=3"/>
+
+  <!-- Override definitivo per i bottoni -->
+  <style>
+    .container { width: min(1100px, 92%); margin: 24px auto 40px; }
+    .hero { text-align: center; }
+    .hero h1 { margin: 16px 0 8px; font-size: 28px; font-weight: 700; }
+    .hero p { color: #555; margin: 0 0 20px; }
+
+    /* Forza layout in colonna */
+    .cards { display: flex !important; flex-direction: column !important; gap: 20px !important; max-width: 680px !important; margin: 0 auto !important; }
+    .card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .card h2 { margin: 4px 0 8px; }
+    .card p { color: #555; }
+
+    /* *** BOTTONI NERI STATICI *** */
+    a.button {
+      display: inline-block !important;
+      margin-top: 10px !important;
+      padding: 8px 16px !important;
+      border-radius: 6px !important;
+      background: #fff !important;     /* sfondo bianco */
+      color: #000 !important;           /* testo nero */
+      border: 1px solid #000 !important;/* bordo nero */
+      font-size: 14px !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+    }
+    /* nessuna variazione su hover/active/focus */
+    a.button:hover,
+    a.button:active,
+    a.button:focus {
+      background: #fff !important;
+      color: #000 !important;
+      border: 1px solid #000 !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Crimini – Mappe interattive</h1>
+      <p>Seleziona una mappa: l’elenco è generato automaticamente da <code>maps_manifest.json</code>.</p>
+    </section>
+
+    <section id="cards" class="cards"></section>
+  </main>
+
+  <script>
+  async function load() {
+    const resp = await fetch('./maps_manifest.json?v=' + Date.now());
+    const items = await resp.json();
+
+    const cards = document.getElementById('cards');
+    cards.innerHTML = items.map(it => `
+      <article class="card">
+        <h2>${it.title}</h2>
+        <p>Dataset: <code>${it.data_url.split('/').pop()}</code></p>
+        <a class="button" href="mappa.html?id=${encodeURIComponent(it.id)}">Apri mappa</a>
+      </article>
+    `).join('');
+  }
+  load();
+  </script>
+</body>
+</html>

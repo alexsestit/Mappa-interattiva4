@@ -1,0 +1,28 @@
+[
+  {
+    "id": "carthef",
+    "title": "Furti di auto in sosta (CARTHEF)",
+    "data_url": "./dati_mappa_CARTHEF.json",
+    "legend_title": "Tasso di furti (auto in sosta)",
+    "breaks": [0, 0.1, 0.2, 0.5, 1, 2, 3, 4, 6],
+     "colors": ["#228B22","#228B22","#228B22","#FFD700","#FFA500","#FF4500","#FF0000","#B22222","#800000"]
+  },
+   {
+    "id": "vehithef",
+    "title": "Furti in auto in sosta (VEHITHEF)",
+    "data_url": "./dati_mappa_VEHITHEF.json",
+    "legend_title": "Tasso di furti in auto (in sosta)",
+    "breaks": [0, 0.25, 0.5, 1, 1.5, 2, 2.5, 3],
+"colors": ["#ffffb2","#fed976","#feb24c","#fd8d3c","#f03b20","#bd0026","#800000","#660000","#4b0000"]
+
+  }
+  ,
+  {
+    "id": "burgthef",
+    "title": "Furti in abitazioni (BURGTHEF)",
+    "data_url": "./dati_mappa_BURGTHEF.json",
+    "legend_title": "Tasso di furti in abitazioni",
+    "breaks": [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
+"colors": ["#ffffb2","#fed976","#feb24c","#fd8d3c","#f03b20","#bd0026","#800000","#660000","#4b0000"]
+  }
+]

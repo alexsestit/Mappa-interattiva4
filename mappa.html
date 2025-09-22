@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mappa – Crimini su veicoli</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* --- Topbar: Home a sx, titolo centrato --- */
+    .topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 16px;border-bottom:0}
+    .topbar .tabs{display:flex;gap:12px}
+    .topbar .tabs a,.topbar .tabs a:link,.topbar .tabs a:visited,.topbar .tabs a:hover,.topbar .tabs a:active,.topbar .tabs a:focus{
+      display:inline-block;padding:6px 14px;border-radius:6px;background:#fff;color:#000;border:1px solid #000;
+      font-size:14px;font-weight:500;text-decoration:none;outline:none;box-shadow:none;cursor:pointer}
+    .page-title{margin:0;text-align:center;font-size:28px;font-weight:700}
+    .right-spacer{height:1px}
+
+    /* --- Mappa full width --- */
+    html,body{margin:0;padding:0}
+    #mapid{height:calc(100vh - 72px);width:100vw;max-width:100%;margin:0;border:0;box-shadow:none}
+
+    /* --- Legenda responsive --- */
+    .legend-control{position:relative}
+    .legend-toggle{
+      display:none; /* visibile solo <720px */
+      width:44px;height:44px;border-radius:50%;
+      background:#fff;border:1px solid #000;color:#000;
+      font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.15);
+      align-items:center;justify-content:center;
+    }
+    .legend-toggle:focus{outline:none}
+    .legend-panel{
+      background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #ddd;
+      box-shadow:0 4px 18px rgba(0,0,0,.08);font-size:13px;line-height:1.4;min-width:180px
+    }
+    .legend-panel h4{margin:0 0 6px;font-size:14px;color:#333;font-weight:700}
+    .legend-panel i{display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:-3px;border:1px solid rgba(0,0,0,.25);border-radius:3px}
+
+    /* Sotto i 720px: mostra il bottone, nascondi pannello finché non è "open" */
+    @media (max-width: 720px){
+      .legend-toggle{display:flex}
+      .legend-panel{display:none;position:absolute;top:54px;right:0;z-index:1000}
+      .legend-control.open .legend-panel{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="tabs"><a href="index.html">Home</a></nav>
+    <h1 id="title" class="page-title">Mappa</h1>
+    <div class="right-spacer"></div>
+  </div>
+
+  <div id="mapid"></div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+  const qs = (k) => new URLSearchParams(location.search).get(k);
+
+  // Colori: usa quelli dal manifest se presenti, altrimenti fallback giallo→rosso→bordeaux (9 colori)
+  function makeGetColor(breaks, palette) {
+    const defaultPalette = ["#ffffb2","#fed976","#feb24c","#fd8d3c","#f03b20","#bd0026","#800000","#660000","#4b0000"];
+    const pal = Array.isArray(palette) && palette.length ? palette : defaultPalette;
+    return function(d){
+      if (d == null) return '#D3D3D3';
+      if (d > breaks[breaks.length-1]) return pal[Math.min(pal.length-1, breaks.length)];
+      for (let i = breaks.length - 1; i >= 0; i--) {
+        if (d > breaks[i]) return pal[Math.min(i + 1, pal.length - 1)];
+      }
+      return pal[0];
+    }
+  }
+
+  async function init() {
+    const id = qs('id');
+    if (!id) { document.getElementById('title').textContent = 'Mappa (id mancante)'; return; }
+
+    // Cache-busting per evitare versioni vecchie
+    const ts = Date.now();
+    const manifest = await (await fetch('./maps_manifest.json?v=' + ts)).json();
+    const cfg = manifest.find(x => String(x.id) === String(id));
+    if (!cfg) { document.getElementById('title').textContent = `Mappa non trovata: ${id}`; return; }
+
+    document.title = cfg.title;
+    document.getElementById('title').textContent = cfg.title;
+
+    // Mappa
+    const map = L.map('mapid').setView([42.8, 12.8], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Dati
+    const [geojson, rows] = await Promise.all([
+      fetch('./NUTS_RG_20M_2021_4326_LEVL_3.geojson?v=' + ts).then(r => r.json()),
+      fetch(cfg.data_url + '?v=' + ts).then(r => r.json())
+    ]);
+
+    const byNuts = new Map(
+      rows.map(o => [String(o.NUTS_ID).trim(), parseFloat(String(o.RATE_TIME).replace(',', '.'))])
+    );
+
+    const features = (geojson.features || []).filter(f => f.properties.CNTR_CODE === 'IT' && f.properties.LEVL_CODE === 3);
+    features.forEach(f => {
+      const code = String(f.properties.NUTS_ID).trim();
+      const val = byNuts.get(code);
+      f.properties.rate_time = Number.isFinite(val) ? val : null;
+    });
+
+    const breaks = cfg.breaks || [0,0.5,1,1.5,2,2.5,3];
+    const getColor = makeGetColor(breaks, cfg.colors);
+
+    function style(feat) {
+      const v = feat.properties.rate_time;
+      return { fillColor: getColor(v), weight: 1, opacity: 1, color: 'white', dashArray: '3', fillOpacity: 0.7 };
+    }
+
+    L.geoJSON({ type: 'FeatureCollection', features }, {
+      style,
+      onEachFeature: (feature, layer) => {
+        const { NUTS_NAME, NUTS_ID, rate_time } = feature.properties;
+        const v = rate_time;
+        layer.bindPopup(`<b>${NUTS_NAME}</b> (${NUTS_ID})<br/>Valore: ${v !== null ? v.toFixed(3) : 'Dato mancante'}`);
+      }
+    }).addTo(map);
+
+    // --- Legenda responsive (controllo personalizzato) ---
+    const LegendControl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function() {
+        const container = L.DomUtil.create('div', 'legend-control');
+
+        // Bottone circolare (mostrato solo <720px via CSS)
+        const btn = L.DomUtil.create('button', 'legend-toggle', container);
+        btn.setAttribute('type','button');
+        btn.setAttribute('aria-label','Apri legenda');
+        btn.innerHTML = '≡';
+
+        // Pannello legenda
+        const panel = L.DomUtil.create('div', 'legend-panel info legend', container);
+        panel.innerHTML = `<h4>${cfg.legend_title || 'Tasso'}</h4>` +
+          breaks.map((from, i) => {
+            const to = breaks[i+1];
+            // +1e-6 per colpire la classe giusta
+            const color = getColor(from + 1e-6);
+            return `<div><i style="background:${color}"></i> ${from}${to ? '&ndash;'+to : '+'}</div>`;
+          }).join('');
+
+        // Toggle apertura (solo mobile)
+        L.DomEvent.on(btn, 'click', function(e){
+          L.DomEvent.stopPropagation(e);
+          container.classList.toggle('open');
+        });
+
+        // Evita che lo scroll sulla legenda muova la mappa
+        L.DomEvent.disableClickPropagation(container);
+        L.DomEvent.disableScrollPropagation(container);
+
+        return container;
+      }
+    });
+
+    map.addControl(new LegendControl());
+  }
+
+  init();
+  </script>
+</body>
+</html>
